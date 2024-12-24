@@ -1,0 +1,19 @@
+1. check ipaddress on where the app is running. 
+2. replace http://webapp:port in prometheus.yml with your actual webapp and port
+3. start with (docker compose up -d)
+4. Access Monitoring 
+	a. Graphana will run on localhost:3000
+	b. username admin/admin (dont change skip)
+	c. check where its running (localhost:9090)
+5. Configure Graphaha  DataSource 
+	a. Add DataSource -> Select Prometheus
+	b. URL give (ipaddress:9090) dont give localhost. in our case windows host ip
+	c. click "Save and Test"
+
+6. Configure Graphaha Dashboard
+	a. goto Dashboard
+	b. Click import it will show json editor
+	c. copy-paste  webapp-dashboard.json file contents. 
+	d. click import
+
+7. Click on dashboard it will show app is running or not.
